@@ -1,6 +1,7 @@
 package com.mattallen.notificationtoastexample;
 
 import android.app.Activity;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +26,7 @@ public class MainActivity extends Activity implements OnClickListener
 		switch (v.getId())
 		{
 			case R.id.example1:
-				NotificationToast.makeToast(this, "Example 1", "Title", null, Color.parseColor("#e74c3c"), NotificationToast.LENGTH_SHORT).show();
+				NotificationToast.makeToast(this, "Example 1", "Title", BitmapFactory.decodeResource(getResources(), R.drawable.homer), Color.parseColor("#e74c3c"), NotificationToast.LENGTH_SHORT).show();
 				break;
 
 			case R.id.example2:
