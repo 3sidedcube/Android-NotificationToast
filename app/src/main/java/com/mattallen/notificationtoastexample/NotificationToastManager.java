@@ -94,6 +94,14 @@ public class NotificationToastManager implements OnNotificationToastEnd
 				((ImageView)view.findViewById(R.id.image)).setImageBitmap(toast.getImage());
 				view.findViewById(R.id.background).setBackgroundColor(toast.getColor());
 
+				//gets the status bar height and adds padding to the notification bar view
+				int statusBarTopPadding = 0;
+				int resourceId = toast.getContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
+				if (resourceId > 0) {
+					statusBarTopPadding = toast.getContext().getResources().getDimensionPixelSize(resourceId);
+				}
+				view.setPadding(0, statusBarTopPadding, 0, 0);
+
 				ViewGroup window = (ViewGroup)((Activity)toast.getContext()).getWindow().getDecorView();
 				window.addView(view);
 			}
