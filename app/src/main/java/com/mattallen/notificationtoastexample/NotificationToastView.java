@@ -32,25 +32,16 @@ public class NotificationToastView extends LinearLayout
 
 		mListener = new AnimatorListener()
 		{
-			@Override public void onAnimationStart(Animator animation)
-			{
-
-			}
-
+			@Override public void onAnimationStart(Animator animation){}
 			@Override public void onAnimationEnd(Animator animation)
 			{
 				mCallback.onNotificationToastEnd();
 			}
-
 			@Override public void onAnimationCancel(Animator animation)
 			{
 				mCallback.onNotificationToastEnd();
 			}
-
-			@Override public void onAnimationRepeat(Animator animation)
-			{
-
-			}
+			@Override public void onAnimationRepeat(Animator animation){}
 		};
 	}
 
@@ -69,8 +60,8 @@ public class NotificationToastView extends LinearLayout
 		animator.setStartDelay(mDuration);
 		animator.setListener(mListener);
 		animator.setDuration(500);
-		animator.alpha(0.5f);
-		animator.translationXBy(getWidth());
+		animator.alpha(0f);
+		animator.translationYBy(-getHeight());
 		animator.start();
 	}
 }
