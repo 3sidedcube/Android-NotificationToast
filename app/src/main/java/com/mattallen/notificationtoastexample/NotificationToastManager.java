@@ -96,6 +96,8 @@ public class NotificationToastManager implements OnNotificationToastEnd
 				((ImageView)view.findViewById(R.id.image)).setImageBitmap(toast.getImage());
 				view.findViewById(R.id.background).setBackgroundColor(toast.getColor());
 
+				toast.setToastView(view);
+
 				//gets the status bar height and adds padding to the notification bar view
 				int statusBarTopPadding = 0;
 				int resourceId = toast.getContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
@@ -125,9 +127,12 @@ public class NotificationToastManager implements OnNotificationToastEnd
 				NotificationToast toast;
 				do
 				{
-					toast = getToastQueue().removeFirst();
+					toast = (NotificationToast)getToastQueue().removeFirst();
+					((ViewGroup)toast.getNotificationToastView().getParent()).removeView(toast.getNotificationToastView());
 				}
 				while (toast == null);
+
+
 
 				showNotificationToast(toast);
 			}
