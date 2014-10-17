@@ -11,8 +11,8 @@ import android.graphics.Bitmap;
  */
 public class NotificationToast
 {
-	public static final long LENGTH_SHORT = 3000;
-	public static final long LENGTH_LONG = 6000;
+	public static final long LENGTH_SHORT = 1500;
+	public static final long LENGTH_LONG = 3500;
 
 	private Context mContext;
 	private String mMessage, mTitle;

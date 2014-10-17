@@ -2,7 +2,6 @@ package com.mattallen.notificationtoastexample;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -86,8 +85,11 @@ public class NotificationToastManager implements OnNotificationToastEnd
 
 			try
 			{
-				View view = LayoutInflater.from(toast.getContext())
+				NotificationToastView view = (NotificationToastView) LayoutInflater.from(toast.getContext())
 					.inflate(R.layout.notification_toast_view, (ViewGroup)((Activity)toast.getContext()).getWindow().getDecorView(), false);
+
+				view.setDuration(toast.getDuration());
+				view.setCallback(this);
 
 				((TextView)view.findViewById(R.id.title)).setText(toast.getTitle());
 				((TextView)view.findViewById(R.id.subtitle)).setText(toast.getMessage());
