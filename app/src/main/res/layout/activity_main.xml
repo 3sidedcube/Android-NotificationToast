@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="Demonstration of toasts that appear at the notification area rather than as a floating, undismissable view"
+	/>
+
+    <Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/example3"
+		android:text="EXAMPLE 3"
+		android:layout_alignParentBottom="true"
+		android:background="#2ecc71"
+		android:textColor="#FFFFFF"
+		android:fontFamily="sans-serif-condensed"
+		android:textStyle="bold"
+		android:textSize="24sp"
+	/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/example2"
+		android:text="EXAMPLE 2"
+		android:background="#3498db"
+		android:layout_marginBottom="16dp"
+		android:layout_above="@id/example3"
+		android:textColor="#FFFFFF"
+		android:fontFamily="sans-serif-condensed"
+		android:textStyle="bold"
+		android:textSize="24sp"
+	/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/example1"
+		android:text="EXAMPLE 1"
+		android:layout_above="@id/example2"
+		android:background="#e74c3c"
+		android:layout_marginBottom="16dp"
+		android:textColor="#FFFFFF"
+		android:fontFamily="sans-serif-condensed"
+		android:textStyle="bold"
+		android:textSize="24sp"
+	/>
+
+</RelativeLayout>
