@@ -21,7 +21,7 @@ public class NotificationToast
 	private long mDuration;
 	private NotificationToastView notificationToastView;
 
-	public NotificationToast(Context context, String message, String title, Bitmap image, int color, long duration)
+	public NotificationToast(Context context, String title, String message, Bitmap image, int color, long duration)
 	{
 		this.mContext = context;
 		this.mMessage = message;
@@ -31,9 +31,9 @@ public class NotificationToast
 		this.mDuration = duration;
 	}
 
-	public static NotificationToast makeToast(Context context, String message, String title, Bitmap image, int color, long duration)
+	public static NotificationToast makeToast(Context context, String title, String message, Bitmap image, int color, long duration)
 	{
-		return new NotificationToast(context, message, title, image, color, duration);
+		return new NotificationToast(context, title, message, image, color, duration);
 	}
 
 	public void setToastView(NotificationToastView notificationToastView) { this.notificationToastView = notificationToastView; }
