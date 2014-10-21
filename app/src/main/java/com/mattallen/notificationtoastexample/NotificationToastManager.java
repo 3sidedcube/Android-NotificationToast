@@ -132,8 +132,6 @@ public class NotificationToastManager implements OnNotificationToastEnd
 				}
 				while (toast == null);
 
-
-
 				showNotificationToast(toast);
 			}
 		}
