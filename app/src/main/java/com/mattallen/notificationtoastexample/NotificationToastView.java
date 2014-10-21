@@ -37,12 +37,12 @@ public class NotificationToastView extends LinearLayout
 			@Override public void onAnimationStart(Animator animation){}
 			@Override public void onAnimationEnd(Animator animation)
 			{
-				mCallback.onNotificationToastEnd(view);
+				mCallback.onNotificationToastEnd();
 			}
 
 			@Override public void onAnimationCancel(Animator animation)
 			{
-				mCallback.onNotificationToastEnd(view);
+				mCallback.onNotificationToastEnd();
 			}
 			@Override public void onAnimationRepeat(Animator animation){}
 		};
