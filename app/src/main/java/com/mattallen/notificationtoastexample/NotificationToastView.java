@@ -72,7 +72,7 @@ public class NotificationToastView extends LinearLayout
 		animator.setListener(mListener);
 		animator.setDuration(500);
 		animator.alpha(0.5f);
-		animator.translationXBy(getWidth());
+		animator.translationYBy(-getHeight());
 		animator.start();
 	}
 }
