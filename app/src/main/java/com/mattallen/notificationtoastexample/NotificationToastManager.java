@@ -133,8 +133,11 @@ public class NotificationToastManager implements OnNotificationToastEnd
 				do
 				{
 					toast = (NotificationToast)getToastQueue().removeFirst();
+					//((ViewGroup)toast.getNotificationToastView().getParent()).removeView(toast.getNotificationToastView());
 				}
 				while (toast == null);
+
+
 
 				showNotificationToast(toast);
 			}
