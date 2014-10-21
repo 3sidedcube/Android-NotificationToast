@@ -130,13 +130,8 @@ public class NotificationToastManager implements OnNotificationToastEnd
 	}
 
 	@Override
-	public void onNotificationToastEnd(NotificationToastView notificationToastView)
+	public void onNotificationToastEnd()
 	{
-		//removes the notification view
-		/*if(notificationToastView.getParent() != null)
-		{
-			((ViewGroup)notificationToastView.getParent()).removeView(notificationToastView);
-		}*/
 		synchronized (NotificationToastManager.class)
 		{
 			showingNotification = false;
