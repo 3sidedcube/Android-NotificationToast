@@ -19,7 +19,6 @@ public class NotificationToast
 	private Bitmap mImage;
 	private int mColor;
 	private long mDuration;
-	private NotificationToastView notificationToastView;
 
 	public NotificationToast(Context context, String title, String message, Bitmap image, int color, long duration)
 	{
@@ -35,10 +34,6 @@ public class NotificationToast
 	{
 		return new NotificationToast(context, title, message, image, color, duration);
 	}
-
-	public void setToastView(NotificationToastView notificationToastView) { this.notificationToastView = notificationToastView; }
-
-	public NotificationToastView getNotificationToastView() { return notificationToastView; }
 
 	public Context getContext()
 	{

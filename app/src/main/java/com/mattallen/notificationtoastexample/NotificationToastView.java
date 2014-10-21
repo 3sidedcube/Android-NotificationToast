@@ -34,11 +34,7 @@ public class NotificationToastView extends LinearLayout
 		mListener = new AnimatorListener()
 		{
 
-			@Override public void onAnimationStart(Animator animation)
-			{
-
-			}
-
+			@Override public void onAnimationStart(Animator animation){}
 			@Override public void onAnimationEnd(Animator animation)
 			{
 				mCallback.onNotificationToastEnd(view);
@@ -48,11 +44,7 @@ public class NotificationToastView extends LinearLayout
 			{
 				mCallback.onNotificationToastEnd(view);
 			}
-
-			@Override public void onAnimationRepeat(Animator animation)
-			{
-
-			}
+			@Override public void onAnimationRepeat(Animator animation){}
 		};
 	}
 
