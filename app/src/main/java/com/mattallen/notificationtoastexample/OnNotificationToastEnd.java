@@ -2,5 +2,5 @@ package com.mattallen.notificationtoastexample;
 
 public interface OnNotificationToastEnd
 	{
-		public void onNotificationToastEnd();
+		public void onNotificationToastEnd(NotificationToastView notificationToastView);
 	}
